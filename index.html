@@ -20,47 +20,7 @@
 <body>
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Fyle</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        <!-- the given design doesnt have it so ..  -->
     </header>
 
     <main>
@@ -72,7 +32,27 @@
                         <h5 class="fe-text" style="margin-bottom: 25px;">Award Winning</h5>
                         <h2 class="fe-text2" style="font-size: 40px; margin-bottom: 30px;">Digital Marketing Agency</h2>
                         <p class="fe-div-text" style="font-size: 16px; width: 400px;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum</p>
-                        <button class="hero-btn">Contact Us</button>
+                        <button id="openFormBtn" class="hero-btn">Contact Us</button>
+                        <div id="popupForm" class="popup-form">
+                            <div class="form-container">
+                                <span class="close-btn" id="closeFormBtn">&times;</span>
+                                <h2 style="font-family: 'AktivGrotesk,Bold'; font-weight: bold; font-size: 20px;">Talk to us</h2>
+                                <form id="submissionForm" action="YOUR_GETFORM_ENDPOINT" method="POST">
+                                    <label for="email">Work email:</label>
+                                    <input class="input1" type="email" id="email" name="email" required>
+                    
+                                    <div class="form-des">
+                                        <label for="first-name">First name:</label>  
+                                        <input  class="input2" type="text" id="first-name" name="first-name" required>
+                    
+                                        <label for="last-name">Last name:</label>  
+                                        <input class="input3" type="text" id="last-name" name="last-name" required>
+                                    </div>
+                    
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div class="h-div-div2" style="margin-left: 60px;">
                         <img src="./assets/Hero/hero.png" style="width: 369px; height: 537px;" alt="">
@@ -108,8 +88,8 @@
                                                         <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
                                                         <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
                                                         <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button style="width: 185px; border-width: 0px; border-radius: 3px; height: 50px; margin-top: 40px; display: flex; flex-direction: row; justify-content: center;">
-                                                            <p style="color: #FF3147; font-size: 20px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                        <button class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
                                                             <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
                                                         </button>
                                                     </div>
@@ -123,8 +103,8 @@
                                                         <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
                                                         <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
                                                         <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button style="width: 185px; border-width: 0px; border-radius: 3px; height: 50px; margin-top: 40px; display: flex; flex-direction: row; justify-content: center;">
-                                                            <p style="color: #FF3147; font-size: 20px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                        <button class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
                                                             <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
                                                         </button>
                                                     </div>
@@ -137,8 +117,8 @@
                                                         <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
                                                         <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
                                                         <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button style="width: 185px; border-width: 0px; border-radius: 3px; height: 50px; margin-top: 40px; display: flex; flex-direction: row; justify-content: center;">
-                                                            <p style="color: #FF3147; font-size: 20px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                        <button class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
                                                             <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
                                                         </button>
                                                     </div>
@@ -151,8 +131,8 @@
                                                         <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
                                                         <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
                                                         <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button style="width: 185px; border-width: 0px; border-radius: 3px; height: 50px; margin-top: 40px; display: flex; flex-direction: row; justify-content: center;">
-                                                            <p style="color: #FF3147; font-size: 20px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                        <button class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
                                                             <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
                                                         </button>
                                                     </div>
@@ -165,8 +145,8 @@
                                                         <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
                                                         <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
                                                         <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button style="width: 185px; border-width: 0px; border-radius: 3px; height: 50px; margin-top: 40px; display: flex; flex-direction: row; justify-content: center;">
-                                                            <p style="color: #FF3147; font-size: 20px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                        <button class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16pxpx; margin-top: 5px;">Read More &ThickSpace;</p> 
                                                             <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
                                                         </button>
                                                     </div>
@@ -179,8 +159,8 @@
                                                         <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
                                                         <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
                                                         <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button style="width: 185px; border-width: 0px; border-radius: 3px; height: 50px; margin-top: 40px; display: flex; flex-direction: row; justify-content: center;">
-                                                            <p style="color: #FF3147; font-size: 20px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                        <button class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
                                                             <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
                                                         </button>
                                                     </div>
@@ -193,8 +173,8 @@
                                                         <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
                                                         <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
                                                         <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button style="width: 185px; border-width: 0px; border-radius: 3px; height: 50px; margin-top: 40px; display: flex; flex-direction: row; justify-content: center;">
-                                                            <p style="color: #FF3147; font-size: 20px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                        <button class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
                                                             <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
                                                         </button>
                                                     </div>

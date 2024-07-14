@@ -1,6 +1,44 @@
 
 $($(document).ready(function () {
     console.log('document was created');
+    $(document).ready(function() {
+        $('#openFormBtn').click(function() {
+            $('#popupForm').css('display', 'flex');
+        });
+    
+        $('#closeFormBtn').click(function() {
+            $('#popupForm').css('display', 'none');
+        });
+    
+        $(window).click(function(event) {
+            if (event.target.id === 'popupForm') {
+                $('#popupForm').css('display', 'none');
+            }
+        });
+    
+        $('#submissionForm').submit(function(event) {
+            event.preventDefault();
+    
+            var formData = $(this).serialize();
+    
+            $.ajax({
+                url: $(this).attr('action'),
+                method: 'POST',
+                data: formData,
+                success: function(response) {
+                    console.log('Success:', response);
+                    alert('Form submitted successfully!');
+                    $('#popupForm').css('display', 'none');
+                    $('#submissionForm')[0].reset();
+                },
+                error: function(error) {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                }
+            });
+        });
+    });
+    
     
     $(document).ready(function() {
         $.fn.slide = function() {
