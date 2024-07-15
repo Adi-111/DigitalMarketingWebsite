@@ -10,10 +10,10 @@
 
 1. **'Contact Us' Button**
 
-   - The '**Contact Us**' button is clickable and opens a pop-up form as shown in the [example image](https://www.notion.so/Web-developer-assignment-8705a516d60b45a2a3f59a16e8cc7b20?pvs=21).
+   - The '**Contact Us**' button
 
 2. **Pop-up Form and Submission**
-   - The pop-up form is designed [provided design](./screenshot/contact.png).
+   - The pop-up form is designed ![img](./screenshot/contact.png).
    - Upon submission, the form details are submitted to getform.io.
 
 ### Form Submission
@@ -27,7 +27,7 @@
 
    - This section features a slider with images sliding from left to right.
    - The 3 dots on the bottom right change accordingly.
-   - On hovering over any image, the picture is replaced with the design shown in the [third picture](./screenshot/service.png).
+   - On hovering over any image, the picture is replaced with the design shown in the ![service](./screenshot/service.png).
    - The '**Read More**' button opens 'fylehq.com' in a new tab.
 
 4. **'Our Project' Section**
@@ -35,7 +35,7 @@
    - Clicking the content on the right changes the image on the left.
    - The other two images can be of your choice.
 5. **Highlight on Hover**
-   - Hovering over the cards causes a highlighted interaction as shown in the [example](./screenshot/project.png).
+   - Hovering over the cards causes a highlighted interaction as shown in the ![project](./screenshot/project.png).
 
 ### Hosting
 
@@ -53,8 +53,6 @@ The page is hosted on GitHub Pages.
 digital-marketing-website/
 ├── assets/
 │ ├── (all artifacts)
-├── bootstrap/
-│ ├── (Bootstrap source files)
 ├── js/
 │ ├── jq.min.js
 │ ├── scripts.js
