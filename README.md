@@ -48,21 +48,6 @@ The page is hosted on GitHub Pages.
 - **HTML5**
 - **CSS3**
 
-## File Structure
-
-digital-marketing-website/
-├── assets/
-│ ├── (all artifacts)
-├── js/
-│ ├── jq.min.js
-│ ├── scripts.js
-├── screenshots/
-│ ├── (all screenshots)
-├── index.html
-├── index.css
-├── index.js
-├── README.md
-
 ## Contributing
 
 1. Fork the repository.
