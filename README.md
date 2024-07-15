@@ -18,8 +18,8 @@
 
 ### Form Submission
 
-1. Create a free account on [getform.io](http://getform.io/).
-2. Create an endpoint and POST your form data to this endpoint.
+1. Used [getform.io](http://getform.io/).
+2. Created an endpoint and POST your form data to this endpoint.
 
    - This endpoint will act as an API endpoint to receive form submissions.
 
