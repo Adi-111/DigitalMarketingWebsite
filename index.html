@@ -25,46 +25,49 @@
 
     <main>
         <!-- Hero Section  -->
-        <section class="Hero">
-            <div class="container">
-                <div class="h-div" style="margin-top:125px; padding-left: 200px; padding-bottom: 100px;">
-                    <div class="h-div-div1" style=" width: 450px;">
-                        <h5 class="fe-text" style="margin-bottom: 25px;">Award Winning</h5>
-                        <h2 class="fe-text2" style="font-size: 40px; margin-bottom: 30px;">Digital Marketing Agency</h2>
-                        <p class="fe-div-text" style="font-size: 16px; width: 400px;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum</p>
-                        <button id="openFormBtn" class="hero-btn">Contact Us</button>
-                        <div id="popupForm" class="popup-form">
-                            <div class="form-container">
-                                <span class="close-btn" id="closeFormBtn">&times;</span>
-                                <h2 style="font-family: 'AktivGrotesk,Bold'; font-weight: bold; font-size: 20px;">Talk to us</h2>
-                                <form id="submissionForm" action="YOUR_GETFORM_ENDPOINT" method="POST">
-                                    <label for="email">Work email:</label>
-                                    <input class="input1" type="email" id="email" name="email" required>
-                    
-                                    <div class="form-des">
-                                        <label for="first-name">First name:</label>  
-                                        <input  class="input2" type="text" id="first-name" name="first-name" required>
-                    
-                                        <label for="last-name">Last name:</label>  
-                                        <input class="input3" type="text" id="last-name" name="last-name" required>
-                                    </div>
-                    
-                                    <button type="submit">Submit</button>
-                                </form>
-                            </div>
-                        </div>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="text-content">
+                        <h5 class="highlight-text">Award Winning</h5>
+                        <h2 class="main-title">Digital Marketing Agency</h2>
+                        <p class="description">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum</p>
+                        <button id="openFormBtn" class="btn hero-btn">Contact Us</button>
                     </div>
-                    <div class="h-div-div2" style="margin-left: 60px;">
-                        <img src="./assets/Hero/hero.png" style="width: 369px; height: 537px;" alt="">
+                    <div class="image-content">
+                        <img src="./assets/Hero/hero.png" alt="Hero Image">
                     </div>
                 </div>
             </div>
         </section>
+        
+        
+        <!-- Popup Form -->
+        <div id="popupForm" class="popup-form">
+            <div class="form-container">
+                <span class="close-btn" id="closeFormBtn">&times;</span>
+                <h2>Talk to us</h2>
+                <form id="submissionForm" action="YOUR_GETFORM_ENDPOINT" method="POST">
+                    <input class="input-field" type="email" id="email" name="email" placeholder="Work email" required>
+                    <div class="form-des">
+                        <input class="input-field" type="text" id="first-name" name="first-name" placeholder="First name" required>
+                        <input class="input-field" type="text" id="last-name" name="last-name" placeholder="Last name" required>
+                    </div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="checkbox" id="terms-checkbox" name="terms-checkbox" required>
+                        I agree to Fyle's terms and conditions, and provide consent to send me communication.
+                    </label>
+                    <button type="submit" style="padding: 10px 20px;
+                    font-size: 16px;
+                    cursor: pointer;" class="btn form-btn">Contact Us</button>
+                </form>
+            </div>
+        </div>
         <!-- Services Section -->
         <section class="services" style="padding-top: 100px;">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col">
                         <div class="s-div">
                             <div class="s-div-div1">
                                 <p class="s-div-title">What We Do</p>
@@ -81,9 +84,86 @@
                                 <div class="slider-overflow">
                                     <div class="slider-outer">
                                         <div class="slider">
+                                            <!-- Slide 1 -->
                                             <div class="slide">
                                                 <div class="slide-content">
-                                                    <img src="./assets/service/1.png" style="width:278px; height: 426px;" alt="">
+                                                    <img src="./assets/service/1.png" style="width: 278px; height: 426px; " alt="">
+                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
+                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
+                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
+                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
+                                                        <button id="hbtn" class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat for other slides -->
+                                            <!-- Slide 2 -->
+                                            <div class="slide">
+                                                <div class="slide-content">
+                                                    <img src="./assets/service/2.png" style="width: 278px; height: 426px;" alt="">
+                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
+                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
+                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
+                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
+                                                        <button id="hbtn1" class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 3 -->
+                                            <div class="slide">
+                                                <div class="slide-content">
+                                                    <img src="./assets/service/3.png" style="width: 278px; height: 426px;" alt="">
+                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
+                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
+                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
+                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
+                                                        <button id="hbtn2" class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 4  -->
+                                            <div class="slide">
+                                                <div class="slide-content">
+                                                    <img src="./assets/service/4.jpg" style="width: 278px; height: 426px;" alt="">
+                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
+                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
+                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
+                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
+                                                        <button id="hbtn3 class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="slide">
+                                                <div class="slide-content">
+                                                    <img src="./assets/service/5.jpg" style="width: 278px; height: 426px;" alt="">
+                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
+                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
+                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
+                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
+                                                        <button id="hbtn4" class="hero-btn" style="background-color: azure;">
+                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
+                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- hidden slide for error handling  -->
+                                            <div class="slide">
+                                                <div class="slide-content">
+                                                    <img src="./assets/service/6.jpg" style="width: 278px; height: 426px;" alt="">
                                                     <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
                                                         <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
                                                         <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
@@ -95,93 +175,22 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Repeat above div structure for other images -->
                                             <div class="slide">
                                                 <div class="slide-content">
-                                                    <img src="./assets/service/2.png" style="width:278px; height: 426px;" alt="">
+                                                    <img src="./assets/service/7.jpg" style="width: 278px; height: 426px;" alt="">
                                                     <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
-                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
-                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
-                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
+                                                        <img src="./assets/service/icon/icon.png" class="hover-s-img"" alt="">
+                                                        <h4 class="hover-s-h4">web development</h4>
+                                                        <h6 class="hover-s-h6">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
                                                         <button class="hero-btn" style="background-color: azure;">
-                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
-                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="slide">
-                                                <div class="slide-content">
-                                                    <img src="./assets/service/3.png" style="width:278px; height: 426px;" alt="">
-                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
-                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
-                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
-                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button class="hero-btn" style="background-color: azure;">
-                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
-                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="slide">
-                                                <div class="slide-content">
-                                                    <img src="./assets/service/4.jpg" style="width:278px; height: 426px;" alt="">
-                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
-                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
-                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
-                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button class="hero-btn" style="background-color: azure;">
-                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
-                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="slide">
-                                                <div class="slide-content">
-                                                    <img src="./assets/service/5.jpg" style="width:278px; height: 426px;" alt="">
-                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
-                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
-                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
-                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button class="hero-btn" style="background-color: azure;">
-                                                            <p style="color: #FF3147; font-size: 16pxpx; margin-top: 5px;">Read More &ThickSpace;</p> 
-                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="slide">
-                                                <div class="slide-content">
-                                                    <img src="./assets/service/6.jpg" style="width:278px; height: 426px;" alt="">
-                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
-                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
-                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
-                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button class="hero-btn" style="background-color: azure;">
-                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
-                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="slide">
-                                                <div class="slide-content">
-                                                    <img src="./assets/service/7.jpg" style="width:278px; height: 426px;" alt="">
-                                                    <div class="hover-s" style="display: flex; flex-direction: column; align-items: center;">
-                                                        <img src="./assets/service/icon/icon.png" style="margin-top: 88px;" alt="">
-                                                        <h4 style="margin-top: 30px; color: white; text-transform: uppercase; font-family: 'Poppins';">web development</h4>
-                                                        <h6 style="text-align: center; margin-top: 18px; color: white;">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</h6>
-                                                        <button class="hero-btn" style="background-color: azure;">
-                                                            <p style="color: #FF3147; font-size: 16px; margin-top: 5px;">Read More &ThickSpace;</p> 
-                                                            <img src="./assets/service/arrow.png" style="margin-top: 15px;" alt="">
+                                                            <p class="hero-btn-p">Read More &ThickSpace;</p> 
+                                                            <img src="./assets/service/arrow.png" class="hero-btn-img" alt="">
                                                         </button>
                                                     </div>
                                                 </div>
                                             </div>
                                             
-                                            <!-- ... -->
+        
                                         </div>
                                     </div>
                                 </div>
@@ -196,6 +205,7 @@
                 </div>
             </div>
         </section>
+        
 
         <!-- Why Choose Us Section -->
         <section class="why" id="why">

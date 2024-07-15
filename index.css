@@ -7,29 +7,103 @@ body{
     overflow-x: hidden;
     
 }
+/* herp-section  */
 
-.h-div{
-    display: flex;
-    flex-direction: row;
+.hero {
+    background-color: #f5f5f5;
+    padding: 50px 0;
 }
+
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 15px;
+}
+
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+.text-content {
+    flex: 1 1 50%; /* Takes 50% width on medium screens, full width on smaller screens */
+    max-width: 500px; /* Limits max width for text content */
+    padding: 0 15px; /* Adds padding for spacing */
+    margin-bottom: 20px; /* Space between text and button */
+
+}
+.highlight-text{
+    text-align: left;
+    font: normal normal 600 30px/110px Cormorant SC;
+    letter-spacing: 0px;
+    color: #FF3147;
+    text-transform: uppercase;
+    opacity: 1;
+
+}
+.main-title{
+    text-align: left;
+font: normal normal bold 60px/80px Cormorant SC;
+letter-spacing: 0px;
+color: #000000;
+text-transform: uppercase;
+opacity: 1;
+}
+.description{
+    top: 502px;
+left: 375px;
+width: 584px;
+height: 83px;
+/* UI Properties */
+text-align: left;
+font: normal normal normal 16px/30px Poppins;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+
 .hero-btn {
-    margin-top: 50px;
+    width: 100%; /* Full width button */
+    max-width: 200px; /* Limits max width for button */
+    margin-top: 20px; /* Adjusted margin for spacing */
     background: #FF3147;
-    width: 150px;
-    height: 50px;
     color: white;
     text-transform: uppercase;
-    font-family: 'Poppins,SemiBold';
-    border-width: 0px;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
+    padding: 15px 0; /* Vertical padding for button */
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+.image-content {
+    flex: 1 1 50%; /* Takes 50% width on medium screens, full width on smaller screens */
+    text-align: center; /* Center align image */
 }
+
+.image-content img {
+    max-width: 100%; /* Ensure image stays within container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    .text-content {
+        max-width: 100%; /* Full width text content */
+    }
+
+    .hero-btn {
+        max-width: 100%; /* Full width button */
+    }
+}
+
 
 /* Popup Form Styles */
 .popup-form {
@@ -55,7 +129,7 @@ button {
 
 .form-des {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
 }
 
@@ -93,6 +167,17 @@ label {
     color: #333;
 }
 
+.checkbox-label {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
 button[type="submit"] {
     margin-top: 20px;
     padding: 10px;
@@ -104,37 +189,39 @@ button[type="submit"] {
     border-radius: 4px;
 }
 
-
-
+/* Services Section */
 
 .services {
-    background: #FAFAFA;
+    padding-top: 100px;
+    background-color: #FAFAFA;
+}
+
+.services .container {
+    margin-left: 115px;
+    margin-right: 0px;
 }
 
 .s-div {
     margin-left: 270px;
     width: calc(100% - 270px);
-    @media (max-width:600px) {
-        margin-left: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
-.s-div-div1 {
-    width: 120px;
+@media (max-width: 600px) {
+    .s-div {
+        margin-left: 0;
+        width: 100%;
+        text-align: center; /* Center align text for better readability */
+    }
 }
 
 .s-div-title {
     text-transform: uppercase;
-    font-size: 18.8px;
-    font-family: 'CormorantSC, SemiBold';
+    text-align: left;
+    font: normal normal 600 24px/26px Cormorant SC;
     color: #FF3147;
 }
 
 .s-div-div2 {
-    margin-top: 40px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -151,13 +238,15 @@ button[type="submit"] {
 
 .s-div-div2-div1-title {
     text-transform: uppercase;
-    font-family: 'CormorantSC,Bold';
-    font-size: 35px;
+    text-align: left;
+    font: normal normal bold 45px/65px Cormorant SC;  
 }
 
 .s-div-div2-div2-text {
-    font-size: 16px;
-    font-family: 'Poppins,Regular';
+    text-align: left;
+    font: normal normal normal 16px/30px Poppins;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .max-container {
@@ -165,6 +254,42 @@ button[type="submit"] {
     max-width: 1300px;
     position: relative;
     margin-bottom: 70px;
+}
+
+@media (max-width: 1200px) {
+    .max-container {
+        max-width: 1150px;
+    }
+
+    .s-div-div2-div1-title {
+        font-size: 25px; /* Adjusted font size */
+    }
+    .s-div-div2-div2-text{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .max-container {
+        max-width: 100%; /* Adjusted to full width for better responsiveness */
+    }
+
+    .s-div-div2-div2 {
+        margin-left: 0; /* Adjust margin for smaller screens */
+    }
+
+    .slide-content {
+        width: 100%; /* Adjusted to full width for better responsiveness */
+        height: auto; /* Ensure images maintain aspect ratio */
+    }
+
+    .hover-s {
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+
+    .hover-s .hero-btn {
+        padding: 8px 16px; /* Adjusted button padding */
+    }
 }
 
 .slider-overflow {
@@ -186,7 +311,7 @@ button[type="submit"] {
     display: inline-block;
     position: relative;
     margin: 10px;
-    padding: 10px 20px 10px 0px;
+    padding: 10px 20px 10px 0;
 }
 
 .slide-content {
@@ -196,6 +321,8 @@ button[type="submit"] {
     position: relative;
     border-radius: 5px;
 }
+
+
 
 .slide-content img {
     position: absolute;
@@ -212,35 +339,105 @@ button[type="submit"] {
     left: 0;
     width: 100%;
     height: 100%;
-
     color: #fff;
     justify-content: center;
     align-items: center;
     text-align: center;
     z-index: 10;
+    /* Semi-transparent background */
+    padding: 20px; /* Padding for content */
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
 }
 
-.dots {
-    text-align: left;
-    margin-top: 10px;
+.slide-content:hover .hover-s {
+    display: flex;
+    flex-direction: column;
 }
 
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.8s ease;
+.hover-s-img {
+    width: 80px; /* Adjust image width */
+    height: 80px; /* Adjust image height */
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 20px; /* Space between image and text */
 }
 
-.active {
-    background-color: #FF3147;
+.hover-s-h4 {
+    margin: 0;
+    color: white;
+    font-size: 18px; /* Title font size */
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px; /* Space between title and description */
+}
+
+.hover-s-h6 {
+    color: white;
+    font-size: 14px; /* Description font size */
+    line-height: 1.5; /* Line height for readability */
+    margin-bottom: 20px; /* Space at the bottom */
+}
+
+.hover-s .hero-btn {
+    background-color: azure;
+    color: #FF3147; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.hover-s .hero-btn:hover {
+    background-color: #FF3147; /* Hover background color */
+    color: white; /* Hover text color */
+}
+
+@media (max-width: 1200px) {
+    .hover-s-img {
+        width: 60px; /* Adjusted image width */
+        height: 60px; /* Adjusted image height */
+        margin-bottom: 15px; /* Adjusted margin */
+    }
+
+    .hover-s-h4 {
+        font-size: 16px; /* Adjusted font size */
+    }
+
+    .hover-s-h6 {
+        font-size: 12px; /* Adjusted font size */
+        margin-bottom: 15px; /* Adjusted margin */
+    }
+
+    .hover-s .hero-btn {
+        padding: 8px 16px; /* Adjusted padding */
+        font-size: 14px; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 600px) {
+    .dots {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.8s ease;
+    }
+
+    .active {
+        background-color: #FF3147;
+    }
 }
 
 
-   
+
+   /* work  */
 
 .w-div{
     display: flex;
@@ -377,6 +574,8 @@ button[type="submit"] {
     }
     
 }
+
+  /* project */
 .p-div{
     margin-top: 70px;
     margin-bottom: 120px;
@@ -479,6 +678,7 @@ p-div-div-div-div-title{
     }
     
 }
+/* growth */
 .growth{
     background: #FAFAFA;
 }
@@ -639,6 +839,7 @@ p-div-div-div-div-title{
 .footer{
     background: #FF3147;
 }
+/* hovers  */
 .hovered {
     box-shadow: 0 4px 8px #672C2C1F;
     
